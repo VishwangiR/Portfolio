@@ -88,8 +88,16 @@ h2{
     height: 10vh;
     max-height: 15vh;
     box-shadow: 0.05vh 0.05vw 10px #acc3d0;
+    transition-property: transform;
+    transition-duration: 0.5s;
+    transition-delay: 0s;
+    transition-timing-function: ease;
 
 }
+.skills img:hover{
+    transform: translateY(-10px);
+}
+
 .About_text{
     font-size: 2vw;
     padding-top: 2vh;
@@ -114,6 +122,22 @@ hr{
     max-width: 40vw;
     padding-top: 1vh;
     padding-bottom: 1vh;
+}
+@keyframes slideinleft{
+    from{
+        transform: translateX(-80vw);
+    }
+    to{
+        transform: translateX(0px);
+    }
+
+}
+.project_img{
+    animation-name: slideinleft;
+    animation-duration: 5s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-direction: forward;
 }
 .Text_Projects{
     
@@ -184,13 +208,16 @@ a{
     color: black;
 }
 #submit_button{
-    color: white;
+   color: white;
     background-color: rgb(28, 83, 131);
     box-shadow: 0.5vw 0.5vh 10px white;
     border-radius: 2vw;
 }
 #submit_button:hover{
+    background-color:#acc3d0;
+    border-color: rgb(28, 83, 131);
     box-shadow: 0.5vw 0.5vh 10px rgb(28, 83, 131);
+    color:black;
 }
 
 a:hover{
